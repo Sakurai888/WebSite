@@ -1,0 +1,31 @@
+2021.05.30
+
+Visual Studio 2019 による Linux コンテナー 
+ベースの ASP.NET Core Web アプリ開発環境の構築
+https://qiita.com/hiromasa-masuda/items/f9753e1917b6b1240b23
+
+はじめに
+
+WSL 2 によるシステム コールの完全互換の最大のメリットの一つとして、
+WSL 上で Docker が動作するようになったということがあります。
+ここでは、この WSL 2 を利用し、Visual Studio 2019 を使った 
+Linux コンテナー ベースの ASP.NET Core Web アプリ開発環境の
+構築手順を説明します。
+
+Docker Desktop （Windows Start Menu から起動します。
+                  =================================
+メールアドレス
+sakurai_haruo@yahoo.co.jp
+パスワード Password must be at least 9 characters.
+PaxxMaxx8809
+
+はじめて Docker Desktop for Windows を使う場合は、
+[Start] で、チュートリアルを確認するといいと思います。
+
+[Settings(上部歯車アイコン)] - [General] で、[Use the WSL 2 based engine] 
+にチェックが入っていると、WSL 2 ベースのエンジンが利用されます。
+
+Visual Studio 2019にコンポーネント(機能)を追加する方法
+Visual Studio 2019 を起動し、[プロジェクトの追加] を選択し，
+ - [ASP.NET Core Web アプリ] を追加した。
+

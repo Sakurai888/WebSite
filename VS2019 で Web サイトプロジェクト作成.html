@@ -1,0 +1,240 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><link rel="stylesheet" href="/BlogEngine/themes/WebSurfer7/css.axd?name=style1.6.1.0.css" type="text/css" /><link rel="shortcut icon" href="../../../../pics/blogengine.ico" type="image/x-icon" /><meta name="keywords" content="VS2019,Web Site Project" /><meta name="author" content="WebSurfer" /><link rel="last" title="SQLite で Movie チュートリアル (CORE)" href="/BlogEngine/post/2021/10/10/use-sqlite-for-movie-tutorial-instead-of-sql-server.aspx" /><link rel="first" title="ブログのページを開設しました" href="/BlogEngine/post/2010/05/03/Blog-page-opened.aspx" /><link rel="next" title="VS2019 で RDLC デザイナの表示" href="/BlogEngine/post/2020/04/24/how-to-enable-rdlc-report-viewer-designer-on-visual-studio-2019.aspx" /><link rel="prev" title="TableAdapter 構成ウィザードで不具合(その 2)" href="/BlogEngine/post/2020/04/21/tableadapter-configuration-wizard-does-not-work-2nd.aspx" /><link type="application/rss+xml" rel="alternate" title="VS2019 で Web サイトプロジェクト作成 (RSS)" href="/BlogEngine/post/feed/2020/04/23/web-site-template-in-visual-studio-2019.aspx?format=ATOM" /><link type="application/rss+xml" rel="alternate" title="VS2019 で Web サイトプロジェクト作成 (ATOM)" href="/BlogEngine/post/feed/2020/04/23/web-site-template-in-visual-studio-2019.aspx?format=ATOM" /><link rel="contents" title="Archive" href="/BlogEngine/archive.aspx" /><link rel="start" title="WebSurfer's Home" href="/BlogEngine/" /><link type="application/rdf+xml" rel="meta" title="SIOC" href="http://surferonwww.info/BlogEngine/sioc.axd" /><link type="application/apml+xml" rel="meta" title="APML" href="http://surferonwww.info/BlogEngine/apml.axd" /><link type="application/rdf+xml" rel="meta" title="FOAF" href="http://surferonwww.info/BlogEngine/foaf.axd" /><link type="application/rss+xml" rel="alternate" title="WebSurfer's Home (RSS)" href="http://surferonwww.info/BlogEngine/syndication.axd?format=rss" /><link type="application/atom+xml" rel="alternate" title="WebSurfer's Home (ATOM)" href="http://surferonwww.info/BlogEngine/syndication.axd?format=atom" /><link type="application/rsd+xml" rel="edituri" title="RSD" href="http://surferonwww.info/BlogEngine/rsd.axd" /><meta http-equiv="content-type" content="text/html; charset=utf-8" /><link type="application/opensearchdescription+xml" rel="search" title="WebSurfer's Home" href="http://surferonwww.info/BlogEngine/opensearch.axd" /><script type="text/javascript" src="/BlogEngine/js.axd?path=/BlogEngine/SyntaxHighlighter3/scripts/shCore.js"></script><script type="text/javascript" src="/BlogEngine/js.axd?path=/BlogEngine/SyntaxHighlighter3/scripts/shBrushCSharp.js"></script><script type="text/javascript" src="/BlogEngine/js.axd?path=/BlogEngine/SyntaxHighlighter3/scripts/shBrushCss.js"></script><script type="text/javascript" src="/BlogEngine/js.axd?path=/BlogEngine/SyntaxHighlighter3/scripts/shBrushJScript.js"></script><script type="text/javascript" src="/BlogEngine/js.axd?path=/BlogEngine/SyntaxHighlighter3/scripts/shBrushPlain.js"></script><script type="text/javascript" src="/BlogEngine/js.axd?path=/BlogEngine/SyntaxHighlighter3/scripts/shBrushSql.js"></script><script type="text/javascript" src="/BlogEngine/js.axd?path=/BlogEngine/SyntaxHighlighter3/scripts/shBrushVb.js"></script><script type="text/javascript" src="/BlogEngine/js.axd?path=/BlogEngine/SyntaxHighlighter3/scripts/shBrushXml.js"></script><link type="text/css" rel="stylesheet" href="/BlogEngine/SyntaxHighlighter3/styles/shCore.css" /><link type="text/css" rel="stylesheet" href="/BlogEngine/SyntaxHighlighter3/styles/shThemeDefault.css" /><script type="text/javascript" src="/BlogEngine/js.axd?path=/BlogEngine/Scripts/jquery-1.4.1.min.js"></script><script type="text/javascript" src="/BlogEngine/js.axd?path=/BlogEngine/Scripts/jquery.lightbox-0.5.pack.js"></script><link type="text/css" rel="stylesheet" href="/BlogEngine/css/jquery.lightbox-0.5.css" /><title>
+	VS2019 で Web サイトプロジェクト作成
+</title></head>
+<body>
+    <form name="aspnetForm" method="post" action="/BlogEngine/post/2020/04/23/web-site-template-in-visual-studio-2019.aspx" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUIMzE3OTQ5NzYPZBYCZg9kFgICBA9kFgICAg9kFggCAw8WAh4HVmlzaWJsZWcWBAIBDw8WBh4LTmF2aWdhdGVVcmwFVC9CbG9nRW5naW5lL3Bvc3QvMjAyMC8wNC8yMS90YWJsZWFkYXB0ZXItY29uZmlndXJhdGlvbi13aXphcmQtZG9lcy1ub3Qtd29yay0ybmQuYXNweB4EVGV4dAVBJmx0OyZsdDsgVGFibGVBZGFwdGVyIOani+aIkOOCpuOCo+OCtuODvOODieOBp+S4jeWFt+WQiCjjgZ3jga4gMikeB1Rvb2xUaXAFD+WJjeOBruODluODreOCsGRkAgMPDxYGHwEFYC9CbG9nRW5naW5lL3Bvc3QvMjAyMC8wNC8yNC9ob3ctdG8tZW5hYmxlLXJkbGMtcmVwb3J0LXZpZXdlci1kZXNpZ25lci1vbi12aXN1YWwtc3R1ZGlvLTIwMTkuYXNweB8CBS5WUzIwMTkg44GnIFJETEMg44OH44K244Kk44OK44Gu6KGo56S6ICZndDsmZ3Q7HwMFD+asoeOBruODluODreOCsGRkAgkPFgIfAGdkAgsPZBYCAgEPFgIfAGgWAgIMDw8WAh8AaGRkAg0PFgIfAGhkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYCBRdjdGwwMCRsb2dpblN0YXR1cyRjdGwwMQUXY3RsMDAkbG9naW5TdGF0dXMkY3RsMDNtQeUo4+7VDyYIurCFbOWeeJ9nMQ==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/BlogEngine/js.axd?path=http%3a%2f%2fsurferonwww.info%2fBlogEngine%2fWebResource.axd%3fd%3dgCk7Xjd80axBL9Uf1mFQL2UQS_iPJ05wPGrJgenGR86XAbO1_Qp2Dtcm1j8US4z9n2uoNG_5cpIN1ysLKvwhWBgQHYk1%26amp%3bt%3d637292387023430478" type="text/javascript"></script>
+
+        <div id="header_upper">
+            <h1>WebSurfer's Home</h1>
+            <div id="sitepath_new">
+                <a href="/Default.aspx">トップ</a>
+                >
+                Blog 1
+                &nbsp; | &nbsp;
+                <a id="ctl00_loginStatus" href="javascript:__doPostBack('ctl00$loginStatus$ctl02','')">ログイン</a>
+            </div>
+        </div>
+    
+        <div id="header_lower">
+            <div class="navitop_new_padding"></div>
+            <a href="javascript:void(BlogEngine.filterByAPML())" class="apmlfilter" >APMLフィルター</a>
+            <ul>
+                <li><a href="http://surferonwww.info/BlogEngine/" rel="home">ホーム</a></li>
+                <li><a href="http://surferonwww.info/BlogEngine/archive.aspx">アーカイブ</a></li>
+                <li><a href="http://surferonwww.info/BlogEngine/contact.aspx">コンタクト</a></li>
+                <li><a href="http://surferonwww.info/BlogEngine/syndication.axd" class="feed"><img src="http://surferonwww.info/BlogEngine/pics/rssButton.gif" alt="Feed" />フィード</a></li>
+            </ul>
+        </div>
+    
+        <div id="home-plane" class="page">
+            <div id="content">
+                
+                
+                
+  
+  
+
+  
+    <div id="postnavigation">
+      <a id="ctl00_cphBody_hlPrev" title="前のブログ" href="/BlogEngine/post/2020/04/21/tableadapter-configuration-wizard-does-not-work-2nd.aspx">&lt;&lt; TableAdapter 構成ウィザードで不具合(その 2)</a> | 
+      <a id="ctl00_cphBody_hlNext" title="次のブログ" href="/BlogEngine/post/2020/04/24/how-to-enable-rdlc-report-viewer-designer-on-visual-studio-2019.aspx">VS2019 で RDLC デザイナの表示 &gt;&gt;</a>
+    </div>
+  
+  
+  
+
+<div class="post xfolkentry" id="post0">
+  <h1><a href="/BlogEngine/post/2020/04/23/web-site-template-in-visual-studio-2019.aspx" class="taggedlink">VS2019 で Web サイトプロジェクト作成</a></h1>
+  <span class="author">by <a href="/BlogEngine/author/WebSurfer.aspx">WebSurfer</a></span>
+  
+    
+  <span id="ctl00_cphBody_696a1732ce0844fb96d76c5baee80246_Label1" class="pubDate">2020年4月23日 11:44</span>
+  <div class="text"><p>Visual Studio 2015 以前（VS2017 は不明）では以下の画像のように [File] ⇒ [New] ⇒ [Wen Site...] (日本語版では［ファイル(F)］⇒［新規作成(N)］⇒［Web サイト(W)...］) で ASP.NET Web Forms の Web サイトプロジェクト作成用のテンプレートが表示されました。Visual Studio 2019 ではそのメニューがどこにあるかという話を書きます。</p>
+
+<p><img src="/BlogEngine/image.axd?picture=2020%2f4%2f0423VS2015New.jpg" width="100%" title="Visual Studio 2015" alt="Visual Studion 2015" /></p>
+
+<p>今は Web アプリケーションプロジェクトを使うのが主流ですが、ASP.NET がリリースされた頃の Web Forms アプリでは Web サイトプロジェクトを使っていました。検証などでページ単位にちょっと試してみたいというような場合は Web サイトプロジェクトが便利なので自分は今でも使っています。</p>
+
+<p>両者の特徴は Microsoft のドキュメント「<a href="https://docs.microsoft.com/ja-jp/previous-versions/dd547590(v=vs.100)">Web アプリケーションプロジェクトと Web サイトプロジェクト</a>」に詳しく書かれていますので見てください。</p>
+
+<p>Web サイトプロジェクトを使うメリットは、上に紹介した記事に書いてありますように、</p>
+
+<p>"Web アプリケーションのごく一部を変更する場合、アプリケーション全体を再配置する必要はありません。 変更したファイルを運用 IIS サーバーにコピーするだけです。 運用サーバー上でファイルを直接編集することもできます (Web アプリケーション プロジェクトのコード ファイルは単一のアセンブリ ファイルにコンパイルされるため、.aspx ファイルまたは .ascx ファイルのみが変更された場合を除き、少しの変更でもサイト全体を配置する必要があります)。" </p>
+
+<p>・・・ということです。</p>
+
+<p>Web アプリケーションプロジェクトの場合は、特定のページのコードをちょっと変更しただけで全部コンパイルし直さなければならないのですが、コンパイルし直すのに時間がかかるし、一部の変更が他の部分に思わぬ影響を与えることもあるし、あるページは C# で別のページを VB.NET で作るということはできないなど、開発時の検証目的で使う場合はデメリットが大きいと思います。</p>
+
+<p>で、VS2019 ではどのようにすれば Web サイトプロジェクトを作成できるかですが、まず、下の画像のように、ワークロードに「ASP.NET と Web 開発」を選択し「インストールの詳細」で［追加のプロジェクトテンプレート (以前のバージョン)］にチェックを入れてインストールします。</p>
+
+<p><img src="/BlogEngine/image.axd?picture=2020%2f4%2f0423WebSiteProject.jpg" width="100%" title="追加のプロジェクトテンプレート" alt="追加のプロジェクトテンプレート" /></p>
+
+<p>そして、VS2019 の［ファイル(F)］⇒［新規作成(N)］⇒［プロジェクト(P)...］で「新しいプロジェクトの作成」ダイアログを開けば、その中の［ASP.NET Web Forms サイト］という Web サイトプロジェクト用のテンプレートが選択できるはずです。</p>
+
+<p><img src="/BlogEngine/image.axd?picture=2020%2f4%2f0423Template.jpg" width="100%" title="新しいプロジェクトの作成" alt="新しいプロジェクトの作成" /></p>
+
+<p>上の画面で［ASP.NET Web Forms サイト］を選択して［次へ(N)」をクリックして先に進み、次の画面でプロジェクトの名前、プロジェクトを生成する場所（フォルダ）、フレームワークを設定してから［作成(C)］をクリックすればプロジェクトが自動生成されます。</p>
+
+<p><img src="/BlogEngine/image.axd?picture=2020%2f4%2f0423DefaultAspx.jpg" width="100%" title="Default.aspx" alt="Default.aspx" /></p>
+
+<p>上の画像は、生成されたプロジェクトを VS2019 から［デバッグ(D)］⇒［デバッグの開始(S)］(または［デバッグなしで開始(H)］) で実行し、Default.aspx を表示したものです。</p>
+
+<p>（注：アドレスバーに表示されているのが Default.aspx ではなくて Default となっている理由は、テンプレートに実装されている Friendly url の機能によるものです。もちろん無効に設定できます）</p>
+</div>
+  <div class="bottom">
+    <div class="ratingcontainer" style="visibility:hidden">696a1732-ce08-44fb-96d7-6c5baee80246|1|5.0</div>
+    <p class="tags">Tags: <a href="/BlogEngine/?tag=/VS2019" rel="tag">VS2019</a>, <a href="/BlogEngine/?tag=/Web-Site-Project" rel="tag">Web Site Project</a></p>
+    <p class="categories"><a href="/BlogEngine/category/DevelopmentTools-.aspx">DevelopmentTools </a></p>
+  </div>
+
+  <div class="footer">    
+    <div class="bookmarks">
+      <a rel="nofollow" title="Index 0" target="_blank" href="http://www.dotnetkicks.com/submit?url=http%3a%2f%2fsurferonwww.info%2fBlogEngine%2fpost%2f2020%2f04%2f23%2fweb-site-template-in-visual-studio-2019.aspx&amp;title=VS2019+%e3%81%a7+Web+%e3%82%b5%e3%82%a4%e3%83%88%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e4%bd%9c%e6%88%90">Submit to DotNetKicks...</a>
+    </div>
+    
+    
+    
+    
+    <a rel="bookmark" href="http://surferonwww.info/BlogEngine/post.aspx?id=696a1732-ce08-44fb-96d7-6c5baee80246" title="VS2019 で Web サイトプロジェクト作成">Permalink</a> |
+    <a rel="nofollow" href="/BlogEngine/post/2020/04/23/web-site-template-in-visual-studio-2019.aspx#comment">コメント (0)</a>   
+    
+    </div>
+</div>
+  
+  
+    <!-- 
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+      <rdf:Description rdf:about="http://surferonwww.info/BlogEngine/post/2020/04/23/web-site-template-in-visual-studio-2019.aspx" dc:identifier="http://surferonwww.info/BlogEngine/post/2020/04/23/web-site-template-in-visual-studio-2019.aspx" dc:title="VS2019 で Web サイトプロジェクト作成" trackback:ping="http://surferonwww.info/BlogEngine/trackback.axd?id=696a1732-ce08-44fb-96d7-6c5baee80246" />
+    </rdf:RDF>
+    -->
+  
+  
+  <div id="relatedPosts"><p>関連するブログ</p><div><a href="/BlogEngine/post/2019/10/19/simpleinjector-for-aspnet-mvc-with-web-api-project.aspx">SimpleInjector を ASP.NET MVC &amp; Web API で利用</a><span>以下の画像の通り、Visual Studio Community 2015 の .NET 4.6.1 テンプレートでプロジェクトを作って、ASP.NET MVC と Web API の両方が実装された...</span><a href="/BlogEngine/post/2018/04/24/aspnet-45-script-resource-mapping.aspx">ASP.NET 4.5 スクリプト マッピング</a><span>先の記事「ASP.NET 4.5 ScriptManager」で "テンプレートで「空」を選択した場合は、最低でも jQuery, MSAjax, WebForms の 3 つの NuGet パッケー...</span><a href="/BlogEngine/post/2018/12/22/adding-webapi-to-existing-mvc-application.aspx">ASP.NET MVC に Web API 追加</a><span>既存の ASP.MET MVC5 アプリに Web API 2.2 のコントローラを追加してみました。その方法を備忘録として書いておきます。需要はないかもしれませんが。（笑）
+
+
+
+既存の M...</span></div></div>
+  
+  
+
+<div id="commentlist"  style="display:none;">
+    
+</div>
+
+
+
+
+
+  
+  
+
+      
+            </div>
+
+            <div id="sidepanel">
+                <div id="widgetzone_be_WIDGET_ZONE" class="widgetzone"><div class="widget textbox" id="widgetd9ada63d-3462-4c72-908e-9d35f0acce40"><h4>About this blog</h4><div class="content"><p>2010年5月にこのブログを立ち上げました。その後 <a href="/blogengine2/default.aspx">ブログ２</a> を追加し、ここは ASP.NET 関係のトピックス、ブログ２はそれ以外のトピックスに分けました。</p></div></div><div class="widget search" id="widget93fd255f-4e51-4224-8094-d2ccc826d31e"><h4>Search</h4><div class="content"><div id="searchbox">
+<label for="searchfield" style="display:none">Search</label><input type="text" value="Enter search term" id="searchfield" onkeypress="if(event.keyCode==13) return BlogEngine.search('/BlogEngine/')" onfocus="BlogEngine.searchClear('Enter search term')" onblur="BlogEngine.searchClear('Enter search term')" /><input type="button" value="Search" id="searchbutton" onclick="BlogEngine.search('/BlogEngine/');" onkeypress="BlogEngine.search('/BlogEngine/');" /><br /><input type="checkbox" id="searchcomments"  /><label for="searchcomments">Include comments in search</label></div>
+</div></div><div class="widget tagcloud" id="widget01fb0297-c50c-4a91-8bf2-7da1814633bd"><h4>Tag cloud</h4><div class="content">
+
+
+<div id="ctl00_01fb0297c50c4a918bf27da1814633bd_panelStdTagCloud">
+	
+    <ul id="ctl00_01fb0297c50c4a918bf27da1814633bd_ulTags"><li><a href="/BlogEngine/?tag=/3D" class="smallest" title="Tag: 3D">3D</a> </li><li><a href="/BlogEngine/?tag=/ACT" class="small" title="Tag: ACT">ACT</a> </li><li><a href="/BlogEngine/?tag=/Ajax" class="medium" title="Tag: Ajax">Ajax</a> </li><li><a href="/BlogEngine/?tag=/ASPNET" class="smallest" title="Tag: ASP.NET">ASP.NET</a> </li><li><a href="/BlogEngine/?tag=/async" class="small" title="Tag: async">async</a> </li><li><a href="/BlogEngine/?tag=/await" class="small" title="Tag: await">await</a> </li><li><a href="/BlogEngine/?tag=/CheckBox" class="smallest" title="Tag: CheckBox">CheckBox</a> </li><li><a href="/BlogEngine/?tag=/Core" class="biggest" title="Tag: Core">Core</a> </li><li><a href="/BlogEngine/?tag=/DataAnnotations" class="smallest" title="Tag: DataAnnotations">DataAnnotations</a> </li><li><a href="/BlogEngine/?tag=/Download" class="smallest" title="Tag: Download">Download</a> </li><li><a href="/BlogEngine/?tag=/DropDownList" class="smallest" title="Tag: DropDownList">DropDownList</a> </li><li><a href="/BlogEngine/?tag=/FileUpload" class="smallest" title="Tag: FileUpload">FileUpload</a> </li><li><a href="/BlogEngine/?tag=/Forms-e8aa8de8a8bc" class="smallest" title="Tag: Forms 認証">Forms 認証</a> </li><li><a href="/BlogEngine/?tag=/GridView" class="medium" title="Tag: GridView">GridView</a> </li><li><a href="/BlogEngine/?tag=/HTTP-Handler" class="smallest" title="Tag: HTTP Handler">HTTP Handler</a> </li><li><a href="/BlogEngine/?tag=/HttpClient" class="smallest" title="Tag: HttpClient">HttpClient</a> </li><li><a href="/BlogEngine/?tag=/Identity" class="medium" title="Tag: Identity">Identity</a> </li><li><a href="/BlogEngine/?tag=/IIS" class="smallest" title="Tag: IIS">IIS</a> </li><li><a href="/BlogEngine/?tag=/IIS-Express" class="smallest" title="Tag: IIS Express">IIS Express</a> </li><li><a href="/BlogEngine/?tag=/jQuery" class="small" title="Tag: jQuery">jQuery</a> </li><li><a href="/BlogEngine/?tag=/JSON" class="small" title="Tag: JSON">JSON</a> </li><li><a href="/BlogEngine/?tag=/Linq" class="smallest" title="Tag: Linq">Linq</a> </li><li><a href="/BlogEngine/?tag=/ListView" class="smallest" title="Tag: ListView">ListView</a> </li><li><a href="/BlogEngine/?tag=/ModalPopup" class="smallest" title="Tag: ModalPopup">ModalPopup</a> </li><li><a href="/BlogEngine/?tag=/MVC" class="big" title="Tag: MVC">MVC</a> </li><li><a href="/BlogEngine/?tag=/MVC5" class="smallest" title="Tag: MVC5">MVC5</a> </li><li><a href="/BlogEngine/?tag=/MySQL" class="smallest" title="Tag: MySQL">MySQL</a> </li><li><a href="/BlogEngine/?tag=/ObjectDataSource" class="smallest" title="Tag: ObjectDataSource">ObjectDataSource</a> </li><li><a href="/BlogEngine/?tag=/Profile" class="smallest" title="Tag: Profile">Profile</a> </li><li><a href="/BlogEngine/?tag=/Role" class="smallest" title="Tag: Role">Role</a> </li><li><a href="/BlogEngine/?tag=/Session" class="smallest" title="Tag: Session">Session</a> </li><li><a href="/BlogEngine/?tag=/SQL" class="smallest" title="Tag: SQL">SQL</a> </li><li><a href="/BlogEngine/?tag=/TableAdapter" class="small" title="Tag: TableAdapter">TableAdapter</a> </li><li><a href="/BlogEngine/?tag=/Tag" class="smallest" title="Tag: Tag">Tag</a> </li><li><a href="/BlogEngine/?tag=/Task" class="smallest" title="Tag: Task">Task</a> </li><li><a href="/BlogEngine/?tag=/Upload" class="smallest" title="Tag: Upload">Upload</a> </li><li><a href="/BlogEngine/?tag=/Validation" class="smallest" title="Tag: Validation">Validation</a> </li><li><a href="/BlogEngine/?tag=/Validator" class="smallest" title="Tag: Validator">Validator</a> </li><li><a href="/BlogEngine/?tag=/VS2010" class="smallest" title="Tag: VS2010">VS2010</a> </li><li><a href="/BlogEngine/?tag=/WCF" class="smallest" title="Tag: WCF">WCF</a> </li><li><a href="/BlogEngine/?tag=/Web-API" class="smallest" title="Tag: Web API">Web API</a> </li><li><a href="/BlogEngine/?tag=/WP-Cumulus" class="smallest" title="Tag: WP-Cumulus">WP-Cumulus</a> </li><li><a href="/BlogEngine/?tag=/XML" class="smallest" title="Tag: XML">XML</a> </li></ul>
+
+</div></div></div><div class="widget recentposts" id="widget1c6bb55c-a7f4-4959-b39c-f737ffa1dca4"><h4>Recent Posts</h4><div class="content"><ul class="recentPosts" id="recentPosts"><li><a href="/BlogEngine/post/2021/10/10/use-sqlite-for-movie-tutorial-instead-of-sql-server.aspx">SQLite で Movie チュートリアル (CORE)</a></li><li><a href="/BlogEngine/post/2021/10/08/permissions-required-for-stored-procedures-using-execute-statement.aspx">EXECUTE を使うストアドプロシージャ</a></li><li><a href="/BlogEngine/post/2021/10/03/use-mysql-for-movie-tutorial-instead-of-sql-server.aspx">MySQL で Movie チュートリアル (CORE)</a></li><li><a href="/BlogEngine/post/2021/09/21/add-templatefiled-to-datagrid-and-gridview-programmatically.aspx">DataGrid, GridView に動的に列を追加 (2)</a></li><li><a href="/BlogEngine/post/2021/09/20/row-number-in-entity-framework.aspx">Entity Framework で ROW_NUMBER</a></li><li><a href="/BlogEngine/post/2021/09/19/be-careful-about-cache-on-operation-of-linq-to-entities.aspx">Linq to Entities でのキャッシュに注意</a></li><li><a href="/BlogEngine/post/2021/08/25/model-binding-undefined-structure-json-to-mvc5-action-method.aspx">アクションメソッドと構造不定の JSON (MVC5)</a></li><li><a href="/BlogEngine/post/2021/08/23/model-binding-to-action-method-with-undefined-structure-json.aspx">アクションメソッドと構造不定の JSON (CORE)</a></li><li><a href="/BlogEngine/post/2021/08/16/use-bootstrap-datepicker-in-aspnet-mvc5.aspx">ASP.NET MVC5 で boorstrap datepicker 利用</a></li><li><a href="/BlogEngine/post/2021/08/09/link-tag-helper-and-script-tag-helper-for-aspnet-core.aspx">Link Tag Helper と Script Tag Helper (CORE)</a></li></ul></div></div><div class="widget calendar" id="widgetef1271dc-8819-4078-a43c-417f39bf9fcc"><h4>Calendar</h4><div class="content">
+
+<div style="text-align:center">
+  <div id="calendarContainer"><table class="calendar" summary="" style=";border-collapse:collapse;"><tr><td><a href="javascript:BlogEngine.Calendar.nav('2021-09-11')">&lt;&lt;</a>&nbsp;&nbsp;</td><td style="text-align:center;width:100px">2021年10月</td><td align="right">&nbsp;&nbsp;&gt;&gt;</td></tr></table><table id="ctl00_ef1271dc88194078a43c417f39bf9fcc_PostCalendar1" class="calendar" cellspacing="0" cellpadding="2" summary="Post calendar" title="カレンダー" border="0" style="border-width:0px;width:205px;border-collapse:collapse;">
+	<tr><th align="center" abbr="日曜日" scope="col">日</th><th align="center" abbr="月曜日" scope="col">月</th><th align="center" abbr="火曜日" scope="col">火</th><th align="center" abbr="水曜日" scope="col">水</th><th align="center" abbr="木曜日" scope="col">木</th><th align="center" abbr="金曜日" scope="col">金</th><th align="center" abbr="土曜日" scope="col">土</th></tr><tr><td class="other" align="center" style="width:14%;">26</td><td class="other" align="center" style="width:14%;">27</td><td class="other" align="center" style="width:14%;">28</td><td class="other" align="center" style="width:14%;">29</td><td class="other" align="center" style="width:14%;">30</td><td align="center" style="width:14%;">1</td><td class="weekend" align="center" style="width:14%;">2</td></tr><tr><td class="weekend" align="center" style="width:14%;"><a href="/BlogEngine/2021/10/03/default.aspx" class="exist">3</a></td><td align="center" style="width:14%;">4</td><td align="center" style="width:14%;">5</td><td align="center" style="width:14%;">6</td><td align="center" style="width:14%;">7</td><td align="center" style="width:14%;"><a href="/BlogEngine/2021/10/08/default.aspx" class="exist">8</a></td><td class="weekend" align="center" style="width:14%;">9</td></tr><tr><td class="weekend" align="center" style="width:14%;"><a href="/BlogEngine/2021/10/10/default.aspx" class="exist">10</a></td><td align="center" id="today" style="width:14%;">11</td><td align="center" style="width:14%;">12</td><td align="center" style="width:14%;">13</td><td align="center" style="width:14%;">14</td><td align="center" style="width:14%;">15</td><td class="weekend" align="center" style="width:14%;">16</td></tr><tr><td class="weekend" align="center" style="width:14%;">17</td><td align="center" style="width:14%;">18</td><td align="center" style="width:14%;">19</td><td align="center" style="width:14%;">20</td><td align="center" style="width:14%;">21</td><td align="center" style="width:14%;">22</td><td class="weekend" align="center" style="width:14%;">23</td></tr><tr><td class="weekend" align="center" style="width:14%;">24</td><td align="center" style="width:14%;">25</td><td align="center" style="width:14%;">26</td><td align="center" style="width:14%;">27</td><td align="center" style="width:14%;">28</td><td align="center" style="width:14%;">29</td><td class="weekend" align="center" style="width:14%;">30</td></tr><tr><td class="weekend" align="center" style="width:14%;">31</td><td class="other" align="center" style="width:14%;">1</td><td class="other" align="center" style="width:14%;">2</td><td class="other" align="center" style="width:14%;">3</td><td class="other" align="center" style="width:14%;">4</td><td class="other" align="center" style="width:14%;">5</td><td class="other" align="center" style="width:14%;">6</td></tr>
+</table></div><script type="text/javascript">
+function setupBlogEngineCalendar() {
+  BlogEngine.Calendar = {
+  	  months: {},
+	  nav: function(date) {
+		  var m = BlogEngine.Calendar.months;
+		  if (m[date] == null || m[date] == 'undefined')  {
+		  	  WebForm_DoCallback('ctl00$ef1271dc88194078a43c417f39bf9fcc$PostCalendar1',date,BlogEngine.updateCalendar,date,null,false)
+		  } else {
+			  BlogEngine.updateCalendar(m[date], date);
+		  }
+	  }
+  };
+}
+</script>
+  <br />
+  <a href="http://surferonwww.info/BlogEngine/calendar/default.aspx">View posts in large calendar</a>
+</div></div></div></div>
+            </div>
+            
+            <div class="clear2column"></div>
+        </div>        
+    
+        <div id="footer_upper">
+            <div class="navibottom_new">
+                Powered by <a href="http://www.dotnetblogengine.net">BlogEngine.NET</a> 1.6.1.0<br />
+                Theme by <a href="http://www.surferonwww.info/default.aspx">WebSurfer</a><br />                
+            </div>
+            <span class="copyright_new">Copyright&copy; 2007-2020 WebSurfer. All rights reserved.</span>
+        </div>
+    
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="EE680EDF" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWLALDtZ/pBQKigqXKBwKruorkCwLQgKT9CALQgIggAtCA/IcHAtCA4OoOAtCA1NEFAtCAuLUNAtCArJgEAtCAkP8LAtCAxJcOAtCAqPsFAvXvutACAvXvrrcKAvXvkpoBAvXvhsEIAvXv6iQC9e/eiwcC9e/C7g4C9e+20gUC9e/a6ggC9e/O0Q8CmvbYpg0CmvbMjQQCmvaw8QsCmvak1AICmvaIuwoCmvb8ngECmvbgxQgCmvbUKAKa9vjBAgKa9uykCgK/3f69BwK/3eLgDgK/3dbHBQK/3bqrDQK/3a6OBAK/3ZL1CwK/3YbYAgK/3eq/CgK/3Z7UDAK/3YK7BAKUt778Dpn3BAEAwKxB6ir25a2wwqmOECJv" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+function registerVariables(){BlogEngine.webRoot='/BlogEngine/';BlogEngine.i18n.hasRated='既にレーティング済みです';BlogEngine.i18n.savingTheComment='コメントを保存しています...';BlogEngine.i18n.comments='コメント';BlogEngine.i18n.commentWasSaved='保存されました。コメントありがとうございます。';BlogEngine.i18n.commentWaitingModeration='登録ありがとうございます。このコメントは確認後に公開されます。';BlogEngine.i18n.cancel='キャンセル';BlogEngine.i18n.filter='フィルター';BlogEngine.i18n.apmlDescription='APMLのURLか文言を入力してください';BlogEngine.i18n.beTheFirstToRate='最初のレートをつける';BlogEngine.i18n.currentlyRated='現在のレート {0} （{1}人)';BlogEngine.i18n.ratingHasBeenRegistered='レーティング登録されました。ありがとうございます。';BlogEngine.i18n.rateThisXStars='5つ星中 {0}つ星でレーティング';};//]]>
+</script>
+<script type="text/javascript" defer="defer" src="/BlogEngine/js.axd?path=%2fBlogEngine%2fblog.js&amp;v=1.6.1.0"></script>
+<script type="text/javascript">
+//<![CDATA[
+SyntaxHighlighter.config.clipboardSwf='/BlogEngine/SyntaxHighlighter3/scripts/clipboard.swf';
+SyntaxHighlighter.defaults['gutter'] = true;
+SyntaxHighlighter.defaults['smart-tabs'] = true;
+SyntaxHighlighter.defaults['auto-links'] = true;
+SyntaxHighlighter.defaults['collapse'] = false;
+SyntaxHighlighter.defaults['light'] = false;
+SyntaxHighlighter.defaults['tab-size'] = 4;
+SyntaxHighlighter.defaults['toolbar'] = true;
+SyntaxHighlighter.defaults['wrap-lines'] = true;
+SyntaxHighlighter.all();
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+</body>
+</html>

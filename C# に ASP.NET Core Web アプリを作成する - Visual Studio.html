@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="hasSidebar hasPageActions hasBreadcrumb conceptual has-default-focus theme-light" lang="ja-jp" dir="ltr" data-css-variable-support="true" data-authenticated="false" data-auth-status-determined="false" data-target="docs" x-ms-format-detection="none">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="C# に ASP.NET Core Web アプリを作成する - Visual Studio (Windows)" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.microsoft.com/ja-jp/visualstudio/ide/quickstart-aspnet-core" />
+			<meta property="og:description" content="Visual Studio で C# および ASP.NET Core を使用して Hello World の Web アプリを作成する方法について、段階的に説明します。" />
+		<meta property="og:image" content="https://docs.microsoft.com/en-us/media/logos/logo-ms-social.png" />
+		<meta property="og:image:alt" content="Microsoft Logo" />
+
+
+	<meta name="twitter:card" content="summary" />
+
+	<meta name="twitter:site" content="@docsmsft" />
+
+	<meta name="color-scheme" content="light dark">
+
+
+	<meta name="archive_url" content="/previous-versions/visualstudio" />
+<meta name="audience" content="developer" />
+<meta name="author" content="anandmeg" />
+<meta name="bilingual_type" content="hover over" />
+<meta name="breadcrumb_path" content="/visualstudio/_breadcrumb/toc.json" />
+<meta name="depot_name" content="VS.docs" />
+<meta name="description" content="Visual Studio で C# および ASP.NET Core を使用して Hello World の Web アプリを作成する方法について、段階的に説明します。" />
+<meta name="document_id" content="2ab4333f-c992-f580-5a1f-cfc60bcfb650" />
+<meta name="document_version_independent_id" content="e354bcf5-e277-8d35-9850-e5accfb8ace8" />
+<meta name="gitcommit" content="https://github.com/MicrosoftDocs/visualstudio-docs-pr.ja-jp/blob/e3f4b0068698fe0e4797f9193382e5d47ecd5502/docs/ide/quickstart-aspnet-core.md" />
+<meta name="locale" content="ja-jp" />
+<meta name="manager" content="jmartens" />
+<meta name="monikers" content="vs-2017" />
+<meta name="monikers" content="vs-2019" />
+<meta name="monikers" content="vs-2022" />
+<meta name="ms.author" content="meghaanand" />
+<meta name="ms.contentlocale" content="ja-JP" />
+<meta name="ms.custom" content="vs-acquisition" />
+<meta name="ms.date" content="09/14/2021" />
+<meta name="ms.lasthandoff" content="09/24/2021" />
+<meta name="ms.locfileid" content="128432430" />
+<meta name="ms.openlocfilehash" content="27386ceb7ec02b2e04a96b125346f9be92e6af68" />
+<meta name="ms.prod" content="visual-studio-windows" />
+<meta name="ms.sourcegitcommit" content="8e74969ff61b609c89b3139434dff5a742c18ff4" />
+<meta name="ms.technology" content="vs-ide-general" />
+<meta name="ms.topic" content="quickstart" />
+<meta name="ms.translationtype" content="HT" />
+<meta name="ms.workload" content="aspnet" />
+<meta name="ms.workload" content="dotnetcore" />
+<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/visualstudio-docs-pr.ja-jp/blob/live/docs/ide/quickstart-aspnet-core.md" />
+<meta name="recommendations" content="true" />
+<meta name="schema" content="Conceptual" />
+<meta name="site_name" content="Docs" />
+<meta name="toc_preview" content="true" />
+<meta name="uhfHeaderId" content="MSDocsHeader-VisualStudio" />
+<meta name="updated_at" content="2021-10-07 04:14 PM" />
+<meta name="page_type" content="conceptual" />
+<meta name="toc_rel" content="../toc.json" />
+<meta name="pdf_url_template" content="https://docs.microsoft.com/pdfstore/ja-jp/VS.docs/{branchName}{pdfName}" />
+<meta name="search.mshattr.devlang" content="csharp" />
+<meta name="word_count" content="4030" />
+
+
+	<meta name="scope" content="VS IDE" />
+<link href="https://docs.microsoft.com/ja-jp/visualstudio/ide/quickstart-aspnet-core" rel="canonical">
+	<title>C# に ASP.NET Core Web アプリを作成する - Visual Studio (Windows) | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/ja-jp/_themes/styles/f489ca59.site-ltr.css ">
+
+	
+
+	<script id="msdocs-script">
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'ja-jp',
+			contentDir: 'ltr',
+			userLocale: 'ja-jp',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+
+			},
+			hasBinaryRating: true,
+			hasGithubIssues: false,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			feedbackSystem: 'None',
+			feedbackGitHubRepo: '',
+			feedbackProductUrl: '',
+			contentGitUrl: 'https://github.com/MicrosoftDocs/visualstudio-docs.ja-jp/blob/live/docs/ide/quickstart-aspnet-core.md',
+			defaultDevLang: 'csharp',
+			extendBreadcrumb: true,
+			isEditDisplayable: false,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasBookmark: true,
+			hasShare: true,
+			hasRecommendations: true,
+			contributors: [
+						{ name: "anandmeg", url: "https://github.com/anandmeg" },
+						{ name: "olprod", url: "https://github.com/olprod" }
+],
+		},
+		functions:{}
+	};
+	</script>
+	<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+	<script src="https://js.monitor.azure.com/scripts/c/ms.jsll-3.min.js"></script>
+
+	<script src="/_themes/docs.theme/master/ja-jp/_themes/global/5cce29c0.deprecation.js"></script>
+		<script src="/_themes/docs.theme/master/ja-jp/_themes/scripts/f0383756.index-docs.js"></script>
+</head>
+
+<body lang="ja-jp" dir="ltr">
+	<div class="header-holder has-default-focus">
+		<a href="#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused position-fixed has-inner-focus focus-visible top-0 left-0 right-0 padding-xs has-text-centered has-body-background" tabindex="1">メイン コンテンツにスキップ</a>
+
+		<div hidden id="cookie-consent-holder"></div>
+
+		<div id="unsupported-browser" style="
+			background-color: white;
+			color: black;
+			padding: 16px;
+			border-bottom: 1px solid grey;"
+			hidden
+		>
+			<div style="max-width: 800px; margin: 0 auto;">
+				<p style="font-size: 24px">このブラウザーはサポートされなくなりました。</p>
+				<p style="font-size: 16px; margin-top: 16px;">Microsoft Edge にアップグレードすると、最新の機能、セキュリティ更新プログラム、およびテクニカル サポートを利用できます。</p>
+				<div style="margin-top: 12px;">
+					<a href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+						style="
+						background-color: #0078d4;
+						border: 1px solid #0078d4;
+						color: white;
+						padding: 6px 12px;
+						border-radius: 2px;
+						display: inline-block;
+						">
+Microsoft Edge をダウンロードする					</a>
+					<a href="https://docs.microsoft.com/en-US/lifecycle/faq/internet-explorer-microsoft-edge"
+						style="
+							background-color: white;
+							padding: 6px 12px;
+							border: 1px solid #505050;
+							color: #171717;
+							border-radius: 2px;
+							display: inline-block;
+							">
+詳細情報					</a>
+				</div>
+			</div>
+
+		</div>
+		<!-- liquid-tag banners global -->
+		<div id="headerAreaHolder" data-bi-name="header">
+<header role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+	<div class="nav-bar">
+		<div class="nav-bar-brand">
+			<a itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" class="nav-bar-button">
+				<div class="nav-bar-logo has-background-image theme-display is-light" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+				<div class="nav-bar-logo has-background-image theme-display is-dark is-high-contrast" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+			</a>
+		</div>
+	</div>
+	<div class="nav-bar border-top is-hidden-mobile"></div>
+</header>		</div>
+
+						<div class="content-header uhf-container has-padding has-default-focus border-bottom-none" data-bi-name="content-header">
+					<nav class="breadcrumb-holder has-padding-none has-padding-left-medium-tablet has-padding-right-medium-tablet has-padding-left-none-uhf-tablet has-padding-left-none-uhf-tablet has-padding-none-desktop flex-grow-1" data-bi-name="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" role="navigation" aria-label="階層リンク">
+						<ul id="page-breadcrumbs" class="breadcrumbs">
+						</ul>
+					</nav>
+				<div class="content-header-controls">
+					<button type="button" class="contents-button button" data-bi-name="contents-expand" aria-haspopup="true">
+						<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+						<span class="contents-expand-title">内容</span>
+					</button>
+					<button type="button" class="ap-collapse-behavior ap-expanded button" data-bi-name="ap-collapse" aria-controls="action-panel">
+						<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+						<span>フォーカス モードの終了</span>
+					</button>
+				</div>
+				<div class="has-padding-none-tablet padding-xs font-size-s display-flex justify-content-space-between flex-grow-1 page-action-holder">
+					<ul class="is-hidden-mobile action-list justify-content-flex-start has-flex-justify-content-end-tablet display-flex flex-wrap-wrap flex-grow-1 is-unstyled">
+						<li>
+							<a id="lang-link" class="button is-text has-inner-focus is-small is-icon-only-touch" title="英語で読む" data-bi-name="language-toggle">
+								<span id="lang-link-icon" class="icon docon docon-locale-globe" aria-hidden="true"></span>
+								<span id="lang-link-text" class="is-visually-hidden-touch is-hidden-portrait"></span>
+							</a>
+						</li>
+						<li>
+							<button type="button" class="collection button is-text has-inner-focus is-small is-icon-only-touch" data-list-type="collection" data-bi-name="collection" title="コレクションの追加">
+								<span class="icon" aria-hidden="true">
+									<span class="docon docon-circle-addition has-text-primary"></span>
+								</span>
+								<span class="collection-status is-visually-hidden-touch is-hidden-portrait">保存</span>
+							</button>
+						</li>
+								<li id="contenteditbtn" hidden>
+									<a href="https://github.com/MicrosoftDocs/visualstudio-docs.ja-jp/blob/live/docs/ide/quickstart-aspnet-core.md" class="button is-text has-inner-focus is-icon-only-touch is-small" title="このドキュメントを編集する" data-bi-name="edit" data-original_content_git_url="https://github.com/MicrosoftDocs/visualstudio-docs-pr.ja-jp/blob/live/docs/ide/quickstart-aspnet-core.md" data-original_content_git_url_template="{repo}/blob/{branch}/docs/ide/quickstart-aspnet-core.md" data-pr_repo="" data-pr_branch="">
+									<span class="icon" aria-hidden="true">
+										<span class="docon docon-edit-outline"></span>
+									</span>
+									<span class="is-visually-hidden-touch is-hidden-portrait">編集</span>
+								</a>
+							</li>
+						<li>
+<div class="sharing dropdown has-caret">
+	<button class="dropdown-trigger button is-text is-fullwidth justify-content-flex-start has-inner-focus is-small is-icon-only-touch" aria-controls="sharing-menu" aria-expanded="false" title="このドキュメントを共有する" data-bi-name="share">
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-sharing"></span>
+		</span>
+		<span class="is-visually-hidden-touch is-hidden-portrait">共有</span>
+	</button>
+	<div class="dropdown-menu has-padding-small" id="sharing-menu">
+		<ul data-bi-name="share-links">
+			<li>
+				<a class="button is-text is-fullwidth justify-content-flex-start has-inner-focus is-small share-twitter" data-bi-name="twitter">
+					<span class="icon">
+						<span class="docon docon-brand-twitter has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Twitter</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth justify-content-flex-start has-inner-focus is-small share-linkedin" data-bi-name="linkedin">
+					<span class="icon">
+						<span class="docon docon-brand-linkedin has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>LinkedIn</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth justify-content-flex-start has-inner-focus is-small share-facebook" data-bi-name="facebook">
+					<span class="icon">
+						<span class="docon docon-brand-facebook has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Facebook</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth justify-content-flex-start has-inner-focus is-small share-email" data-bi-name="email">
+					<span class="icon">
+						<span class="docon docon-mail-message-fill has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>電子メール</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>						</li>
+					</ul>
+					<button type="button" class="border contents-button button is-small is-text is-hidden-tablet has-inner-focus" aria-label="内容" data-bi-name="contents-expand">
+						<span class="icon">
+							<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+						</span>
+						<span class="contents-expand-title">目次</span>
+					</button>
+					<div class="is-invisible"></div>
+					<div class="is-hidden-tablet level-item is-flexible level-right">
+						<button type="button" class="page-actions-button button is-small is-text is-hidden-tablet has-inner-focus border is-full-height  has-margin-left-small" aria-label="ページ アクション" data-bi-name="pageactions">
+							<span class="icon">
+								<span class="docon docon-more-vertical" aria-hidden="true"></span>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+
+
+		<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus">
+			<!-- liquid-tag banners sectional -->
+		</div>
+	</div>
+
+	<div class="mainContainer  uhf-container has-top-padding  has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile ">
+
+			<div id="left-container" class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop">
+				<nav id="affixed-left-container" class="position-fixed display-flex flex-direction-column" role="navigation" aria-label="プライマリ"></nav>
+			</div>
+
+			<!-- .primary-holder -->
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<!--div.columns -->
+				<div class="columns is-gapless-mobile has-large-gaps ">
+
+
+					<div id="main-column" class="column  is-full is-four-fifths-desktop ">
+
+						<main id="main" role="main" class="content " data-bi-name="content" lang="ja-jp" dir="ltr">
+
+
+
+							<h1 id="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app">クイック スタート: Visual Studio を使用して初めての ASP.NET Core Web アプリを作成する</h1>
+
+								<ul class="metadata page-metadata" data-bi-name="page info" lang="ja-jp" dir="ltr">
+									<li>
+										<time class="is-invisible" data-article-date aria-label="記事のレビュー日" datetime="2021-09-14T00:00:00.000Z" data-article-date-source="ms.date">09/14/2021</time>
+									</li>
+										<li class="contributors-holder">
+											<ul class="facepile has-margin-left-none is-small" data-bi-name="contributors">
+																<li class="facepile-item">
+																	<a href="https://github.com/anandmeg" title="anandmeg" aria-label="anandmegGitHub プロファイル" data-src="https://github.com/anandmeg.png?size=32" data-contributor-name="anandmeg" class="facepile-item-coin"
+																	>
+																		<img class="facepile-item-coin-image durable-image" aria-hidden="true" src="https://github.com/anandmeg.png?size=32" role="presentation" onerror="this.className='facepile-item-coin-image durable-image has-error';"/>
+																		<span class="facepile-item-coin-text durable-image-fallback facepile-item-teal"aria-hidden="true">a</span>
+																	</a>
+																</li>
+																<li class="facepile-item">
+																	<a href="https://github.com/olprod" title="olprod" aria-label="olprodGitHub プロファイル" data-src="https://github.com/olprod.png?size=32" data-contributor-name="olprod" class="facepile-item-coin"
+																	>
+																		<img class="facepile-item-coin-image durable-image" aria-hidden="true" src="https://github.com/olprod.png?size=32" role="presentation" onerror="this.className='facepile-item-coin-image durable-image has-error';"/>
+																		<span class="facepile-item-coin-text durable-image-fallback facepile-item-red"aria-hidden="true">o</span>
+																	</a>
+																</li>
+											</ul>
+										</li>
+								</ul>
+
+								<nav id="center-doc-outline" class="doc-outline is-hidden-desktop" data-bi-name="intopic toc" role="navigation" aria-label="記事の概要">
+									<h3>この記事の内容</h3>
+								</nav>
+
+
+							<!-- <content> -->
+								<p>Visual Studio の使用方法を紹介する、この 5 - 10 分のクイック スタートでは、ASP.NET プロジェクト テンプレートと C# プログラミング言語を使って、シンプルな &quot;Hello World&quot; Web アプリを作成します。</p>
+<h2 id="before-you-begin">始める前に</h2>
+<h3 id="install-visual-studio">Visual Studio のインストール</h3>
+<div data-moniker="vs-2017">
+<p>Visual Studio をまだインストールしていない場合は、<a href="https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&amp;utm_source=docs.microsoft.com&amp;utm_campaign=vs+2017+download" data-linktype="external">Visual Studio のダウンロード</a> ページに移動し、無料試用版をインストールしてください。</p>
+</div>
+<div data-moniker="vs-2019 vs-2022">
+<p>Visual Studio をまだインストールしていない場合は、<a href="https://visualstudio.microsoft.com/downloads" data-linktype="external">Visual Studio のダウンロード</a> ページに移動し、無料試用版をインストールしてください。</p>
+</div>
+<div data-moniker="vs-2017 vs-2019">
+<h3 id="choose-your-theme-optional">テーマを選択する (省略可能)</h3>
+<p>このクイック スタート チュートリアルには、ダーク テーマを使用しているスクリーン ショットが含まれます。 ダーク テーマを使用していないが、使用方法を学習したい場合は、「<a href="quickstart-personalize-the-ide?view=vs-2019" data-linktype="relative-path">方法: Visual Studio IDE とエディターのカスタマイズ</a>」を参照してください。</p>
+</div>
+<h2 id="create-a-project">プロジェクトを作成する</h2>
+<p>最初に、ASP.NET Core Web アプリケーション プロジェクトを作成します。 このプロジェクト タイプには、Web アプリを作成するためのすべてのテンプレート ファイルが付属しているので、何も追加する必要はありません。</p>
+<div data-moniker="vs-2017">
+<ol>
+<li><p>Visual Studio 2017 を開きます。</p>
+</li>
+<li><p>上部のメニュー バーから、 <strong>[ファイル]</strong> 、 <strong>[新規]</strong> 、 <strong>[プロジェクト]</strong> の順に選択します。</p>
+</li>
+<li><p><strong>[新しいプロジェクト]</strong> ダイアログ ボックスの左側のウィンドウで <strong>[Visual C#]</strong> を展開し、 <strong>[.NET Core]</strong> を選択します。 中央のウィンドウで、 <strong>[ASP.NET Core Web アプリケーション]</strong> を選択ます。 <br><br>次に、ファイル名を「<code>HelloWorld</code>」にして、 <strong>[OK]</strong> を選択します。</p>
+<p><img src="media/csharp-aspnet-choose-template-name-file.png?view=vs-2019" alt="C# 用の新しい ASP.NET Core Web アプリケーション プロジェクトを作成する" data-linktype="relative-path"></p>
+<div class="NOTE">
+<p>注意</p>
+<p><strong>.NET Core</strong> プロジェクト テンプレートのカテゴリが表示されない場合は、左側のウィンドウで <strong>[Visual Studio インストーラーを開く]</strong> リンクを選択します。 (ディスプレイの設定によっては、表示するためにスクロールする必要があります。)</p>
+<p><img src="media/open-visual-studio-installer.png?view=vs-2019" alt="[新しいプロジェクト] ダイアログ ボックスから Visual Studio インストーラーを開く" data-linktype="relative-path"></p>
+<p>Visual Studio インストーラーが起動します。 <strong>[ASP.NET と Web 開発]</strong> ワークロードを選択してから <strong>[変更]</strong> を選択します。</p>
+<p><img src="media/quickstart-aspnet-workload.png?view=vs-2019" alt="VS インストーラーの ASP.NET ワークロード" data-linktype="relative-path"></p>
+<p>(新しいワークロードのインストールを続ける前に、Visual Studio を終了することが必要な場合があります。)</p>
+</div>
+</li>
+<li><p><strong>[新しい ASP.NET Core Web アプリケーション]</strong> ダイアログ ボックスで、上部のドロップダウン メニューから <strong>[ASP.NET Core 2.1]</strong> を選択します。 次に、 <strong>[Web アプリケーション]</strong> を選択し、 <strong>[OK]</strong> を選択します。</p>
+<p><img src="media/aspnet-core-2dot1.png?view=vs-2019" alt="[新しい ASP.NET Core Web アプリケーション] ダイアログ ボックス" data-linktype="relative-path"></p>
+<div class="NOTE">
+<p>注意</p>
+<p><strong>[ASP.NET Core 2.1]</strong> が表示されない場合は、最新リリースの Visual Studio を実行していることを確認します。 インストールを更新する方法の詳細については、「<a href="../install/update-visual-studio?view=vs-2019" data-linktype="relative-path">Visual Studio を最新リリースに更新する</a>」ページを参照してください。</p>
+</div>
+</li>
+</ol>
+<p>すぐに、Visual Studio でプロジェクト ファイルが開きます。</p>
+</div>
+<div data-moniker="vs-2019">
+<ol>
+<li><p>スタート ウィンドウで、 <strong>[新しいプロジェクトの作成]</strong> を選択します。</p>
+<p><span class="mx-imgBorder">
+<img src="../get-started/media/vs-2019/create-new-project-dark-theme.png?view=vs-2019" alt="[新しいプロジェクトの作成] オプションが強調されている Visual Studio のスタート ウィンドウを示すスクリーンショット。" data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p><strong>[新しいプロジェクトの作成]</strong> ウィンドウで、言語の一覧から <strong>[C#]</strong> を選択します。 次に、プラットフォームの一覧から <strong>[Windows]</strong> を選択し、プロジェクトの種類の一覧から <strong>[Web]</strong> を選択します。</p>
+<p>言語、プラットフォーム、およびプロジェクトの種類のフィルターを適用してから、 <strong>[ASP.NET Core Web アプリ]</strong> テンプレートを選択して、 <strong>[次へ]</strong> を選択します。</p>
+<p><span class="mx-imgBorder">
+<img src="../get-started/csharp/media/vs-2019/csharp-create-new-project-aspnet-core.png?view=vs-2019" alt="[C#]、[Windows]、[Web] でフィルター処理された [新しいプロジェクトの作成] ウィンドウを示すスクリーンショット。[ASP.NET Core Web アプリ] プロジェクト テンプレートが強調表示されています。" data-linktype="relative-path">
+</span>
+</p>
+<div class="NOTE">
+<p>注意</p>
+<p><strong>[ASP.NET Core Web アプリ]</strong> テンプレートが表示されない場合は、 <strong>[新しいプロジェクトの作成]</strong> ウィンドウからそれをインストールすることができます。 <strong>[お探しの情報が見つかりませんでしたか?]</strong> メッセージで、 <strong>[さらにツールと機能をインストールする]</strong> リンクを選択します。</p>
+<p><img src="../get-started/media/vs-2019/not-finding-what-looking-for.png?view=vs-2019" alt="[お探しの情報が見つかりませんでしたか?] メッセージの [さらにツールと機能をインストールする] リンクが強調表示されているスクリーンショット。" data-linktype="relative-path"></p>
+<p>次に、Visual Studio インストーラーで、 <strong>[ASP.NET と Web 開発]</strong> ワークロードを選択します。</p>
+<p><img src="../get-started/media/aspnet-core-web-dev-workload.png?view=vs-2019" alt="Visual Studio インストーラーの .NET Core クロスプラットフォーム開発ワークロードを示すスクリーンショット。" data-linktype="relative-path"></p>
+<p>その後、Visual Studio インストーラー内の <strong>[変更]</strong> ボタンをクリックします。 作業内容を保存するよう求められたら、そのようにします。 次に、 <strong>[続行]</strong> を選択してワークロードをインストールします。 その後、この「<a href="#create-a-project" data-linktype="self-bookmark">プロジェクトを作成する</a>」プロシージャの手順 2 に戻ります。</p>
+</div>
+</li>
+<li><p><strong>[新しいプロジェクトの構成]</strong> ウィンドウの <strong>[プロジェクト名]</strong> ボックスに「<em>HelloWorld</em>」とタイプまたは入力します。 その後、 <strong>[次へ]</strong> を選択します。</p>
+<p><span class="mx-imgBorder">
+<img src="../get-started/csharp/media/vs-2019/csharp-name-your-aspnet-hello-world-project.png?view=vs-2019" alt="[プロジェクト名] フィールドに「HelloWorld」と入力された [新しいプロジェクトの構成] ウィンドウを示すスクリーンショット。" data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p><strong>[追加情報]</strong> ウィンドウで、上部のドロップダウン メニューに <strong>[.NET Core 3.1]</strong> が表示されていることを確認します。 チェック ボックスをオンにすると、Docker サポートを有効にすることができます。 [認証の変更] ボタンをクリックして、認証サポートを追加することもできます。 ここでは、以下のオプションから選択できます。</p>
+<ul>
+<li></li>
+<li>[個別のアカウント]: ローカルまたは Azure ベースのデータベースに保管されます。</li>
+<li>[Microsoft ID プラットフォーム]: このオプションでは、認証用に Active Directory、Azure AD、または Microsoft 365 が使用されます。</li>
+<li>[Windows]: イントラネット アプリケーションに適しています。</li>
+</ul>
+<p><strong>[Enable Docker](Docker を有効にする)</strong> チェック ボックスはオフのままにし、[認証の種類] に <strong><a href="%E8%AA%8D%E8%A8%BC%E3%81%AF%E8%A1%8C%E3%82%8F%E3%82%8C%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82?view=vs-2019" data-linktype="relative-path">なし</a></strong> を選択します。 そのうえで <strong>[Create](作成)</strong> を選択します。</p>
+<p><span class="mx-imgBorder">
+<img src="../get-started/csharp/media/vs-2019/aspnet-core-additional-information.png?view=vs-2019" alt="[フレームワーク] フィールドで [.NET Core 3.1] が選択されている [追加情報] ウィンドウを示すスクリーンショット。" data-linktype="relative-path">
+</span>
+</p>
+<p>Visual Studio で新しいプロジェクトが開かれます。</p>
+</li>
+</ol>
+</div>
+<div data-moniker="vs-2022">
+<ol>
+<li><p>スタート ウィンドウで、 <strong>[新しいプロジェクトの作成]</strong> を選択します。</p>
+<p><span class="mx-imgBorder">
+<img src="media/vs-2022/create-new-project-dark-theme.png?view=vs-2019" alt="[新しいプロジェクトの作成] オプションが強調されている Visual Studio のスタート ウィンドウを示すスクリーンショット。" data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p><strong>[新しいプロジェクトの作成]</strong> ウィンドウで、言語の一覧から <strong>[C#]</strong> を選択します。 次に、プラットフォームの一覧から <strong>[Windows]</strong> を選択し、プロジェクトの種類の一覧から <strong>[Web]</strong> を選択します。</p>
+<p>言語、プラットフォーム、およびプロジェクトの種類のフィルターを適用してから、 <strong>[ASP.NET Core Web アプリ]</strong> テンプレートを選択して、 <strong>[次へ]</strong> を選択します。</p>
+<p><span class="mx-imgBorder">
+<img src="media/vs-2022/csharp-create-new-project-aspnet-core.png?view=vs-2019" alt="[C#]、[Windows]、[Web] でフィルター処理された [新しいプロジェクトの作成] ウィンドウを示すスクリーンショット。[ASP.NET Core Web アプリ] プロジェクト テンプレートが強調表示されています。" data-linktype="relative-path">
+</span>
+</p>
+<div class="NOTE">
+<p>注意</p>
+<p><strong>[ASP.NET Core Web アプリ]</strong> テンプレートが表示されない場合は、 <strong>[新しいプロジェクトの作成]</strong> ウィンドウからそれをインストールすることができます。 <strong>[お探しの情報が見つかりませんでしたか?]</strong> メッセージで、 <strong>[さらにツールと機能をインストールする]</strong> リンクを選択します。</p>
+<p><span class="mx-imgBorder">
+<img src="media/vs-2022/not-finding-what-looking-for.png?view=vs-2019" alt="[お探しの情報が見つかりませんでしたか?] メッセージの [さらにツールと機能をインストールする] リンクが強調表示されているスクリーンショット。" data-linktype="relative-path">
+</span>
+</p>
+<p>次に、Visual Studio インストーラーで、 <strong>[ASP.NET と Web 開発]</strong> ワークロードを選択します。</p>
+<p><span class="mx-imgBorder">
+<img src="media/vs-2022/aspnet-core-web-dev-workload.png?view=vs-2019" alt="Visual Studio インストーラーの .NET Core クロスプラットフォーム開発ワークロードを示すスクリーンショット。" data-linktype="relative-path">
+</span>
+</p>
+<p>その後、Visual Studio インストーラー内の <strong>[変更]</strong> ボタンをクリックします。 作業内容を保存するよう求められたら、そのようにします。 次に、 <strong>[続行]</strong> を選択してワークロードをインストールします。 その後、この「<a href="#create-a-project" data-linktype="self-bookmark">プロジェクトを作成する</a>」プロシージャの手順 2 に戻ります。</p>
+</div>
+</li>
+<li><p><strong>[新しいプロジェクトの構成]</strong> ウィンドウの <strong>[プロジェクト名]</strong> ボックスに「<em>HelloWorld</em>」とタイプまたは入力します。 その後、 <strong>[次へ]</strong> を選択します。</p>
+<p><span class="mx-imgBorder">
+<img src="media/vs-2022/csharp-name-your-aspnet-hello-world-project.png?view=vs-2019" alt="[プロジェクト名] フィールドに「HelloWorld」と入力された [新しいプロジェクトの構成] ウィンドウを示すスクリーンショット。" data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p><strong>[追加情報]</strong> ウィンドウで、 <strong>[フレームワーク]</strong> フィールドに <strong>[.NET 6.0]</strong> が表示されていることを確認します。 チェック ボックスをオンにすると、Docker サポートを有効にすることができます。 また、 <strong>[認証の種類]</strong> ドロップダウン リストから値を選択して、認証サポートを追加することもできます。 ここでは、以下のオプションから選択できます。</p>
+<ul>
+<li></li>
+<li>[個別のアカウント]: これらの認証はローカル環境または Azure ベースのデータベースに格納されます。</li>
+<li>[Microsoft ID プラットフォーム]: このオプションでは、認証用に Active Directory、Azure AD、または Microsoft 365 が使用されます。</li>
+<li>[Windows]: イントラネット アプリケーションに適しています。</li>
+</ul>
+<p><strong>[Docker を有効にする]</strong> チェック ボックスはオフのままにして、[認証の種類] で <strong><a href="%E8%AA%8D%E8%A8%BC%E3%81%AF%E8%A1%8C%E3%82%8F%E3%82%8C%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82?view=vs-2019" data-linktype="relative-path">なし</a></strong> を選択します。 そのうえで <strong>[Create](作成)</strong> を選択します。</p>
+<p><span class="mx-imgBorder">
+<img src="media/vs-2022/aspnet-core-additional-information.png?view=vs-2019" alt="[フレームワーク] フィールドで [.NET 6.0] が選択されている [追加情報] ウィンドウを示すスクリーンショット。" data-linktype="relative-path">
+</span>
+</p>
+<p>Visual Studio で新しいプロジェクトが開かれます。</p>
+</li>
+</ol>
+</div>
+<h2 id="create-and-run-the-app">アプリの作成と実行</h2>
+<div data-moniker="vs-2017">
+<ol>
+<li><p><strong>ソリューション エクスプローラー</strong> で、<strong>Pages</strong> フォルダーを展開し、<strong>About.cshtml</strong> を選択します。</p>
+<p><img src="media/csharp-aspnet-about-page-html-file.png?view=vs-2019" alt="Visual Studio ソリューション エクスプローラーのスクリーンショット。HelloWorld プロジェクトのファイルが表示されています。 Pages フォルダーが展開され、About.cshtml が選択されています。" data-linktype="relative-path"></p>
+<p>このファイルは、Web アプリの <strong>About</strong> という名前のページに対応します。これは Web ブラウザーで実行されます。</p>
+<p><img src="media/csharp-aspnet-about-page.png?view=vs-2019" alt="Web アプリの About ページ" data-linktype="relative-path"></p>
+<p>エディターに、<strong>About</strong> ページの &quot;additional information&quot; 領域の HTML コードが表示されます。</p>
+<p><img src="media/csharp-aspnet-about-cshtml-page.png?view=vs-2019" alt="Visual Studio エディターに表示された &quot;additional information&quot; 領域の HTML コード" data-linktype="relative-path"></p>
+</li>
+<li><p>&quot;additional information&quot; というテキストを「<strong>Hello World!</strong>」に変更します。</p>
+<p><img src="media/csharp-aspnet-about-cshtml-page-hello-world.png?view=vs-2019" alt="Visual Studio エディターに表示される既定の &quot;additional information&quot; 領域の HTML コードを変更する" data-linktype="relative-path"></p>
+</li>
+<li><p><strong>ソリューション エクスプローラー</strong> で、<strong>About.cshtml</strong> を展開し、<strong>About.cshtml.cs</strong> を選択します。 (このファイルも、Web ブラウザーの <strong>About</strong> ページに対応しています。)</p>
+<p><img src="media/csharp-aspnet-about-page-code-file.png?view=vs-2019" alt="Visual Studio ソリューション エクスプローラーのスクリーンショット。HelloWorld プロジェクトのファイルが表示されています。 About.cshtml が展開され、About.cshtml.cs が選択されています。" data-linktype="relative-path"></p>
+<p>エディターに、<strong>About</strong> ページの &quot;application description&quot; 領域のテキストを含む C# コードが表示されます。</p>
+<p><img src="media/csharp-aspnet-about-cshtml-cs-code.png?view=vs-2019" alt="Visual Studio エディターに表示されたアプリケーション説明領域の C# コード" data-linktype="relative-path"></p>
+</li>
+<li><p>&quot;application description&quot; というメッセージ テキストを「<strong>What's my message?</strong>」に変更します。</p>
+<p><img src="media/csharp-aspnet-about-cshtml-cs-message.png?view=vs-2019" alt="Visual Studio エディターでアプリケーション説明領域の既定のメッセージ テキストを変更する" data-linktype="relative-path"></p>
+</li>
+<li><p><strong>IIS Express</strong> を選択するか、<strong>Ctrl</strong>+<strong>F5</strong> キーを押してアプリを実行し、Web ブラウザーで開きます。</p>
+<p><img src="media/csharp-aspnet-hello-world-iis-button.png?view=vs-2019" alt="Visual Studio の [IIS Express] ボタンを選択する" data-linktype="relative-path"></p>
+<div class="NOTE">
+<p>注意</p>
+<p><strong>&quot;Web サーバー 'IIS Express' に接続できませんでした&quot;</strong> というエラー メッセージ、または SSL 証明書に関するエラー メッセージが表示された場合は、Visual Studio を閉じます。 次に、右クリック コンテキスト メニューから <strong>[管理者として実行]</strong> オプションを使用して Visual Studio を開きます。 その後、アプリケーションをもう一度実行します。</p>
+</div>
+</li>
+<li><p>Web ブラウザーで、<strong>About</strong> ページに更新されたテキストが含まれていることを確認します。</p>
+<p><img src="media/csharp-aspnet-about-page-hello-world.png?view=vs-2019" alt="加えた変更が含まれる更新後の About ページを表示する" data-linktype="relative-path"></p>
+</li>
+<li><p>Web ブラウザーを閉じます。</p>
+</li>
+</ol>
+<h3 id="review-your-work">作業内容の確認</h3>
+<p>次のアニメーションを見て、前のセクションで完了した作業を確認します。</p>
+<p><img src="media/csharp-aspnet-animated-hello-world.gif?view=vs-2019" alt="Visual Studio で単純な C# ASP.NET Core Web アプリを作成して実行する方法を示すアニメーション .gif ファイルを表示" data-linktype="relative-path"></p>
+<p>このクイック スタートは完了しました。 C#、ASP.NET Core、Visual Studio IDE (統合開発環境) について多少はご理解いただけたかと思います。</p>
+</div>
+<div data-moniker="vs-2019">
+<ol>
+<li><p><strong>ソリューション エクスプローラー</strong> で、<strong>Pages</strong> フォルダーを展開し、<strong>Index.cshtml</strong> を選択します。</p>
+<p><img src="media/vs-2019/csharp-aspnet-index-page-cshtml-file.png?view=vs-2019" alt="ソリューション エクスプローラーで展開された Pages フォルダー内で 'Index.cshtml' が選択されているスクリーンショット。" data-linktype="relative-path"></p>
+<p>このファイルは、Web アプリの <strong>Home</strong> という名前のページに対応します。これは Web ブラウザーで実行されます。</p>
+<p><img src="media/vs-2019/csharp-aspnet-index-page.png?view=vs-2019" alt="Web アプリの Home ページがブラウザー ウィンドウに表示されているスクリーンショット。" data-linktype="relative-path"></p>
+<p>エディターには、<strong>Home</strong> ページに表示されるテキストの HTML コードが表示されます。</p>
+<p><img src="media/vs-2019/csharp-aspnet-index-cshtml-page.png?view=vs-2019" alt="Visual Studio コード エディターでの Home ページの Index.cshtml ファイルを示すスクリーンショット。" data-linktype="relative-path"></p>
+</li>
+<li><p>&quot;ようこそ&quot; のテキストを &quot;<strong>Hello World!</strong>&quot; に変更します。</p>
+<p><img src="media/vs-2019/csharp-aspnet-index-cshtml-page-hello-world.png?view=vs-2019" alt="Visual Studio コード エディターでの 'Index.cshtml' ファイルを示すスクリーンショット。'Welcome' というテキストが 'Hello World!' に変更されています。" data-linktype="relative-path"></p>
+</li>
+<li><p><strong>IIS Express</strong> を選択するか、<strong>Ctrl</strong>+<strong>F5</strong> キーを押してアプリを実行し、Web ブラウザーで開きます。</p>
+<p><img src="media/vs-2019/csharp-aspnet-generic-iis-button.png?view=vs-2019" alt="Visual Studio で [IIS Express] ボタンが強調表示されているスクリーンショット。" data-linktype="relative-path"></p>
+<div class="NOTE">
+<p>注意</p>
+<p><strong>&quot;Web サーバー 'IIS Express' に接続できませんでした&quot;</strong> というエラー メッセージ、または SSL 証明書に関するエラー メッセージが表示された場合は、Visual Studio を閉じます。 次に、右クリック コンテキスト メニューから <strong>[管理者として実行]</strong> オプションを使用して Visual Studio を開きます。 その後、アプリケーションをもう一度実行します。</p>
+</div>
+</li>
+<li><p>Web ブラウザーで、<strong>Home</strong> ページに更新されたテキストが含まれていることを確認します。</p>
+<p><img src="media/vs-2019/csharp-aspnet-index-page-hello-world.png?view=vs-2019" alt="ブラウザー ウィンドウに、更新されたメッセージ 'Hello World!' を含む Web アプリの Home ページが表示されているスクリーンショット。" data-linktype="relative-path"></p>
+</li>
+<li><p>Web ブラウザーを閉じます。</p>
+</li>
+</ol>
+</div>
+<div data-moniker="vs-2022">
+<ol>
+<li><p><strong>ソリューション エクスプローラー</strong> で、<strong>Pages</strong> フォルダーを展開し、<strong>Index.cshtml</strong> を選択します。</p>
+<p><span class="mx-imgBorder">
+<img src="media/vs-2022/csharp-aspnet-index-page-cshtml-file.png?view=vs-2019" alt="ソリューション エクスプローラーで展開された Pages フォルダー内で 'Index.cshtml' が選択されているスクリーンショット。" data-linktype="relative-path">
+</span>
+</p>
+<p>このファイルは、Web アプリの <strong>Home</strong> という名前のページに対応します。これは Web ブラウザーで実行されます。</p>
+<p><span class="mx-imgBorder">
+<img src="media/vs-2022/csharp-aspnet-index-page.png?view=vs-2019" alt="Web アプリの Home ページがブラウザー ウィンドウに表示されているスクリーンショット。" data-linktype="relative-path">
+</span>
+</p>
+<p>エディターには、<strong>Home</strong> ページに表示されるテキストの HTML コードが表示されます。</p>
+<p><span class="mx-imgBorder">
+<img src="media/vs-2022/csharp-aspnet-index-cshtml.png?view=vs-2019" alt="Visual Studio コード エディターでの Home ページの Index.cshtml ファイルを示すスクリーンショット。" data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p>&quot;ようこそ&quot; のテキストを &quot;<strong>Hello World!</strong>&quot; に変更します。</p>
+<p><span class="mx-imgBorder">
+<img src="media/vs-2022/csharp-aspnet-index-cshtml-page-hello-world.png?view=vs-2019" alt="Visual Studio コード エディターでの 'Index.cshtml' ファイルを示すスクリーンショット。'Welcome' というテキストが 'Hello World!' に変更されています。" data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p><strong>IIS Express</strong> を選択するか、<strong>Ctrl</strong>+<strong>F5</strong> キーを押してアプリを実行し、Web ブラウザーで開きます。</p>
+<p><span class="mx-imgBorder">
+<img src="media/vs-2022/csharp-aspnet-generic-iis-button.png?view=vs-2019" alt="Visual Studio で [IIS Express] ボタンが強調表示されているスクリーンショット。" data-linktype="relative-path">
+</span>
+</p>
+<div class="NOTE">
+<p>注意</p>
+<p><strong>&quot;Web サーバー 'IIS Express' に接続できませんでした&quot;</strong> というエラー メッセージ、または SSL 証明書に関するエラー メッセージが表示された場合は、Visual Studio を閉じます。 次に、右クリック コンテキスト メニューから <strong>[管理者として実行]</strong> オプションを使用して Visual Studio を開きます。 その後、アプリケーションをもう一度実行します。</p>
+</div>
+</li>
+<li><p>Web ブラウザーで、<strong>Home</strong> ページに更新されたテキストが含まれていることを確認します。</p>
+<p><span class="mx-imgBorder">
+<img src="media/vs-2022/csharp-aspnet-index-page-hello-world.png?view=vs-2019" alt="ブラウザー ウィンドウに、更新されたメッセージ 'Hello World!' を含む Web アプリの Home ページが表示されているスクリーンショット。" data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p>Web ブラウザーを閉じます。</p>
+</li>
+</ol>
+</div>
+<h2 id="next-steps">次の手順</h2>
+<p>ASP.NET Web アプリの作成方法の詳細については、次のチュートリアルに進んでください。</p>
+<div class="nextstepaction">
+<p><a href="../get-started/csharp/tutorial-aspnet-core?view=vs-2019" data-linktype="relative-path">Visual Studio での C# および ASP.NET の概要</a></p>
+</div>
+<p>または、Docker を使用して Web アプリをコンテナー化する方法について説明します。</p>
+<div class="nextstepaction">
+<p><a href="../containers/overview?view=vs-2019" data-linktype="relative-path">Visual Studio のコンテナー ツール</a></p>
+</div>
+<h2 id="see-also">関連項目</h2>
+<p><a href="../deployment/quickstart-deploy-to-azure?view=vs-2019" data-linktype="relative-path">Visual Studio を使用して Azure App Service に Web アプリを発行する</a></p>
+
+							<!-- </content> -->
+
+						</main>
+
+						<!-- page rating section -->
+								<div class="is-hidden-desktop border-top has-margin-top-large has-padding-top-large binary-rating-holder">
+									
+	
+	
+
+	<div class="feedback-verbatim border-bottom has-padding-bottom-large has-margin-bottom-small" data-bi-name="rating">
+    <div class="binary-rating">
+        <div class="binary-rating-buttons">
+				<h3 class="font-weight-semibold has-margin-top-none font-size-h4 margin-bottom-xs">このページはお役に立ちましたか?</h3>
+			<div>
+                <button class="thumb-rating like has-inner-focus" title="はい" data-bi-name="rating-yes" aria-expanded="false" data-bi-sat="1" aria-controls="rating-container-desktop">
+                    <span aria-hidden="true" class="icon docon docon-like"></span>
+                    <span>はい</span>
+                </button>
+                <button class="thumb-rating dislike has-inner-focus" title="No" data-bi-name="rating-no" data-bi-sat="0" aria-expanded="false" aria-controls="rating-container-desktop">
+                    <span aria-hidden="true" class="icon docon docon-dislike"></span>
+                    <span>No</span>
+                </button>
+            </div>
+        </div>
+        <form class="feedback-verbatim-form is-hidden" id="rating-container-desktop">
+            <div class="verbatim-textarea box position-relative box-shadow-none border has-margin-top-small has-padding-extra-small font-size-xs">
+                <label for="rating-textarea-desktop" class="visually-hidden">追加のフィードバックはありますか?</label>
+                <textarea id="rating-textarea-desktop" rows="4" maxlength="999" placeholder="追加のフィードバックはありますか?" required class="textarea border-none box-shadow-none has-inner-focus"></textarea>
+		    </div>
+			<p class="font-size-xs has-line-height-reset">フィードバックが Microsoft に送信されます。[送信] ボタンを押すと、お客様からのフィードバックが Microsoft 製品とサービスの品質向上のために使用されます。 <a href="https://privacy.microsoft.com/en-us/privacystatement">プライバシー ポリシー。</a></p>
+            <div class="buttons is-right margin-top-xs has-margin-right-extra-small">
+                <button class="skip-rating button is-transparent has-text-primary is-small border-none" type="button">スキップ</button>
+                <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled type="submit">送信</button>
+            </div>
+        </form>
+    </div>
+    <div class="thankyou-rating is-hidden" tabindex="-1">
+        <p>ありがとうございます。</p>
+    </div>
+</div>									</div>
+						<!-- end page rating section -->
+
+
+
+						<!-- recommendations section -->
+							<section id="recommendations-section" data-bi-name="recommendations"></section>
+						<!-- end recommendations section -->
+
+						<!-- feedback section -->
+						<!-- end feedback section -->
+
+						<!-- feedback report section -->
+						<!-- end feedback report section -->
+
+						<div class="border-top is-visible-interactive has-default-focus has-margin-top-large ">
+
+
+
+	<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+	<div class="display-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link flex-shrink-0" href="#" data-bi-name="select-locale"><span class="icon docon docon-world font-size-l has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text"></span></a>
+		<div class="margin-inline-xs flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu-interactive" aria-expanded="false" title="テーマ" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>テーマ</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth justify-content-flex-start"
+					data-theme-to="light">
+					<span class="theme-light has-margin-right-small">
+						<span
+							class="theme-selector-icon css-variable-support border is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+白					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth justify-content-flex-start"
+					data-theme-to="dark">
+					<span class="theme-dark has-margin-right-small">
+						<span
+							class="border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+黒					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth justify-content-flex-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span
+							class="border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+ハイ コントラスト					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/ja-jp/previous-versions/" data-bi-name="archivelink">以前のバージョンのドキュメント</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/ja-jp/teamblog" data-bi-name="bloglink">ブログ</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/ja-jp/contribute" data-bi-name="contributorGuide">投稿</a></li>
+					<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">プライバシー &amp; Cookie</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/ja-jp/legal/termsofuse" data-bi-name="termsofuse">利用条件</a></li>
+				<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">商標</a></li>
+		<li>&copy; Microsoft 2021</li>
+	</ul>
+</footer>
+						</div>
+					</div>
+
+						<div class="font-size-s right-container column is-one-quarter is-one-fifth-desktop is-hidden-mobile is-hidden-tablet-only" data-bi-name="pageactions" role="complementary" aria-label="ページ アクション">
+							<div id="affixed-right-container" class="doc-outline position-fixed is-vertically-scrollable">
+									
+	
+	
+
+	<div class="feedback-verbatim border-bottom has-padding-bottom-small has-margin-bottom-small" data-bi-name="rating">
+    <div class="binary-rating">
+        <div class="binary-rating-buttons">
+
+				<h3 class="font-weight-semibold has-margin-top-none has-margin-bottom-small">このページはお役に立ちましたか?</h3>
+			<div>
+                <button class="thumb-rating like has-inner-focus" title="はい" data-bi-name="rating-yes" aria-expanded="false" data-bi-sat="1" aria-controls="rating-container-mobile">
+                    <span aria-hidden="true" class="icon docon docon-like"></span>
+                    <span>はい</span>
+                </button>
+                <button class="thumb-rating dislike has-inner-focus" title="No" data-bi-name="rating-no" data-bi-sat="0" aria-expanded="false" aria-controls="rating-container-mobile">
+                    <span aria-hidden="true" class="icon docon docon-dislike"></span>
+                    <span>No</span>
+                </button>
+            </div>
+        </div>
+        <form class="feedback-verbatim-form is-hidden" id="rating-container-mobile">
+            <div class="verbatim-textarea box position-relative box-shadow-none border has-margin-top-small has-padding-extra-small font-size-xs">
+                <label for="rating-textarea-mobile" class="visually-hidden">追加のフィードバックはありますか?</label>
+                <textarea id="rating-textarea-mobile" rows="4" maxlength="999" placeholder="追加のフィードバックはありますか?" required class="textarea border-none box-shadow-none has-inner-focus"></textarea>
+		    </div>
+			<p class="font-size-xs has-line-height-reset">フィードバックが Microsoft に送信されます。[送信] ボタンを押すと、お客様からのフィードバックが Microsoft 製品とサービスの品質向上のために使用されます。 <a href="https://privacy.microsoft.com/en-us/privacystatement">プライバシー ポリシー。</a></p>
+            <div class="buttons is-right margin-top-xs has-margin-right-extra-small">
+                <button class="skip-rating button is-transparent has-text-primary is-small border-none" type="button">スキップ</button>
+                <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled type="submit">送信</button>
+            </div>
+        </form>
+    </div>
+    <div class="thankyou-rating is-hidden" tabindex="-1">
+        <p>ありがとうございます。</p>
+    </div>
+</div>								<nav id="side-doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="記事の概要">
+									<h3>この記事の内容</h3>
+								</nav>
+							</div>
+						</div>
+
+				</div>
+				<!--end of div.columns -->
+
+			</section>
+			<!--end of .primary-holder -->
+
+			<!-- interactive container -->
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+			<!-- end of interactive container -->
+		</div>
+
+	</div>
+	<!--end of .mainContainer -->
+
+	<section class="border-top has-default-focus is-hidden-interactive has-margin-top-large ">
+
+
+
+	<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+	<div class="display-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link flex-shrink-0" href="#" data-bi-name="select-locale"><span class="icon docon docon-world font-size-l has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text"></span></a>
+		<div class="margin-inline-xs flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu" aria-expanded="false" title="テーマ" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>テーマ</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth justify-content-flex-start"
+					data-theme-to="light">
+					<span class="theme-light has-margin-right-small">
+						<span
+							class="theme-selector-icon css-variable-support border is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+白					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth justify-content-flex-start"
+					data-theme-to="dark">
+					<span class="theme-dark has-margin-right-small">
+						<span
+							class="border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+黒					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth justify-content-flex-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span
+							class="border theme-selector-icon css-variable-support is-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+ハイ コントラスト					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/ja-jp/previous-versions/" data-bi-name="archivelink">以前のバージョンのドキュメント</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/ja-jp/teamblog" data-bi-name="bloglink">ブログ</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/ja-jp/contribute" data-bi-name="contributorGuide">投稿</a></li>
+					<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">プライバシー &amp; Cookie</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/ja-jp/legal/termsofuse" data-bi-name="termsofuse">利用条件</a></li>
+				<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">商標</a></li>
+		<li>&copy; Microsoft 2021</li>
+	</ul>
+</footer>
+	</section>
+
+	<div id="action-panel" role="region" aria-label="アクション パネル" class="action-panel has-default-focus" tabindex="-1"></div>
+</body>
+</html>

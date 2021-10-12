@@ -1,0 +1,45 @@
+2021.10.10
+
+多分わかりやすいASP.NET Core Webアプリケーション
+https://tech-lab.sios.jp/archives/15758
+
+はじめに
+
+ASP.NET Coreとは？
+マルチプラットフォーム(Windows、Linux、Mac)で動作する.NET環境です。
+最初は、Windowsのみで動作する.NETに内包されていましたが、
+.NET5.0からは「.NET Core」として別系統で開発がされるようになりました。
+でも次期.NETのバージョンから.NET Coreは.NETに統合され、
+またよりを戻すことになりそうです、、、(2019年6月11日現在)。
+
+とりあえず作ってみる
+
+Visual Studio 2019のプロジェクトテンプレートから作成されるハロワ的な
+（Hello World）アプリケーションを作成し、その流れをご説明していきます。
+
+では、早速作ってみます。Visual Studio 2019を起動して、
+「新しいプロジェクトの作成」をクリックします。
+探しているものが見つからない場合，さらにインストールする！
+ASP.NET と WEB 開発（ASP.NET Core）　を選択
+個別のコンポーネント
+.NET Core 3.0
+.NET ネイティブ
+Web Development Tools
+.ASP.NET MVC 4
+オプションをすべてチェックする。
+
+Visual Studio Installer の Community 2019 更新　をクリック
+
+プロジェクトの種類が表示されるので，下スクロールをして，
+「ASP.NET Core Web アプリケーション」をクリックします。
+プロジェクト名に任意の名前を入れて「作成(C)」をクリックします。
+
+プロジェクト名：
+HelloWorld
+場所：
+D:\Ds\D\Home\飛躍_...\WSL2でAQ_linuxを...\_WSL2+Docker+VisualStudio の復習\
+
+とりあえずデバッグ実行してみますと、、、
+
+
+
