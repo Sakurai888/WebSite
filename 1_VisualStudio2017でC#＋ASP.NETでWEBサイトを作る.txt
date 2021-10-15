@@ -1,31 +1,102 @@
-2021.05.30
+2021.10.11
 
-Visual Studio 2019 による Linux コンテナー 
-ベースの ASP.NET Core Web アプリ開発環境の構築
-https://qiita.com/hiromasa-masuda/items/f9753e1917b6b1240b23
+VisualStudioでC#＋ASP.NETでWEBサイトを作ってGitで管理する - Qiita.html
+https://qiita.com/higty/items/14aa8074b03b4cbf6da4
 
-はじめに
+Visual Studio IDE のCommunity Edition 2017 をダウンロードして
+インストールしましょう。ちなみに無料です！
 
-WSL 2 によるシステム コールの完全互換の最大のメリットの一つとして、
-WSL 上で Docker が動作するようになったということがあります。
-ここでは、この WSL 2 を利用し、Visual Studio 2019 を使った 
-Linux コンテナー ベースの ASP.NET Core Web アプリ開発環境の
-構築手順を説明します。
+インストールが終わったら起動して
+メニューバーのファイル→新規→プロジェクトを選択します。
+ダイアログが開きます。
 
-Docker Desktop （Windows Start Menu から起動します。
-                  =================================
-メールアドレス
-sakurai_haruo@yahoo.co.jp
-パスワード Password must be at least 9 characters.
-PaxxMaxx8809
+Webを選択しVisualC#→ASP.NET Core Web アプリケーションを選択します。
+                     ================================
+適当に名前（私は HelloWorld2017) と入れてみました）を入れます。
+新しいGitレポジトリの作成にチェックを入れてOKを押すと
+      ^^^^^^^^^^^^^^^^^^^
+次はこんな感じのが開きます。
 
-はじめて Docker Desktop for Windows を使う場合は、
-[Start] で、チュートリアルを確認するといいと思います。
+ゼロから理解するために「空」を選択しましょう。
+HTTPS用の構成にチェック、認証は認証無しでいきます。
 
-[Settings(上部歯車アイコン)] - [General] で、[Use the WSL 2 based engine] 
-にチェックが入っていると、WSL 2 ベースのエンジンが利用されます。
+これで作成完了です。F5を押してプログラムを実行してみましょう。
+メニューバーのボタン (IIS Express) でも大丈夫です。（下図）
 
-Visual Studio 2019にコンポーネント(機能)を追加する方法
-Visual Studio 2019 を起動し、[プロジェクトの追加] を選択し，
- - [ASP.NET Core Web アプリ] を追加した。
+ブラウザが立ち上がってHello World!と表示されます。
 
+実行しているプログラムを停止するには停止ボタンを押します。
+プログラムが停止しました。ブラウザを閉じても停止できます。
+
+-------------------------
+
+プログラムを修正してみる
+
+さてこれからソースコードを修正してみます。
+ソリューションエクスプローラーをクリックしてStartup.csファイルを
+ダブルクリックします。
+Startup.csファイルの中身（テキストファイルです）が表示されます。
+これがプログラムファイルといわれるものです。
+
+await context.Response.WriteAsync("Hello World!");
+の部分を書き換えてみましょう。
+
+await context.Response.WriteAsync("Higty, Hello World!");
+書き換えたらF5を押して実行します。
+
+プログラムをデバッグする（ブレイクポイントの使い方）
+
+次は現在時刻を表示させてみましょう。
+現在時刻はDateTime.Now.ToString("yyyy/MM/dd")と書くと取得できます。
+
+-------------------------
+
+変更をGitレポジトリに保存する
+
+いい感じに変更できたらその変更したファイルを保存しましょう。
+チームエクスプローラー→変更からGitレポジトリに変更内容を保存できます。
+
+コメントに変更内容を書いてどんな変更をしたか履歴に残すことができます。
+履歴を見るにはブランチ→masterを右クリックでメニューが出てきます。
+変更をしていい感じになったらコミットする癖をつけておきましょう。
+PCがフリーズしたりしてせっかくの変更が無に帰すことを回避できます。
+
+GitHubにソースコードを公開する
+
+作成したソースコードを公開しましょう。全体像はこんな感じです。
+自分のPCでVisualStudioでプログラムを作成しました。そして
+その変更履歴をローカルのレポジトリへ保存するところまでやりました。
+この変更履歴をPushでGitHubへ送信して全世界へソースコードを公開して
+共有できます。
+Sakurai888/WebSite
+Quick setup — if you’ve done this kind of thing before
+https://github.com/Sakurai888/WebSite.git
+
+URLをコピーします。
+
+VisualStudioのチームエクスプローラー→上部の家のアイコン
+→同期ボタンを押します。下図の画面が表示されます。
+
+リモートリポジトリGitレポジトリを発行ボタンを押し、
+先ほどコピーしたURLを張り付けます。
+
+公開ボタンを押します。ローカルの変更内容がGitHubへ送信されて
+公開されます。自分のレポジトリにアクセスしてみましょう。
+
+これで全世界にあなたのソースコードが公開されました。
+
+-------------
+
+削除方法
+
+https://github.com/Sakurai888/WebSite/tree/master
+Sakurai888/WebSite
+ファイル一覧
+
+削除したい「ファイル」をクリックする。
+「ファイル」編集画面に移動する。
+右上に，Copy, Edit, Delete ボタンが表示される。
+
+Delete ボタンをクリックする。
+左下に，「Commit changes」が表示される。
+「Commit changes」をクリックすると，「ファイル」が削除される。
